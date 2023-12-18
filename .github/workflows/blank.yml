@@ -27,6 +27,8 @@ jobs:
 
       - name: Update GITHUB_WORKSPACE
         run: |
+          cygpath "${GITHUB_WORKSPACE}"
+          cygpath C:/Temp
           echo "GITHUB_WORKSPACE=$(cygpath "${GITHUB_WORKSPACE}") >> $GITHUB_ENV
           echo "BUILD_WORKSPACE=$(cygpath "${GITHUB_WORKSPACE}") >> $GITHUB_ENV
 
